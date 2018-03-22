@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  db:
+    image: mongo:3.6
+  app:
+    image: dockercochabamba/2-bday-celebration-amd:v1
+    build: .
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80
+    environment:
+      DB_ADDRESS: mongodb://db:27017
