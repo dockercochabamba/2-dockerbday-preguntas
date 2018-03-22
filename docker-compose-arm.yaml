@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  db:
+    image: ftavares/rpi-mongo:3.0.9
+  app:
+    image: dockercochabamba/2-bday-preguntas-arm:v2
+    build:
+      context: ./
+      dockerfile: Dockerfile.arm
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80
+    environment:
+      DB_ADDRESS: mongodb://db:27017
