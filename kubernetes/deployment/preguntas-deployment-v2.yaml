@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: preguntas
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: preguntas
+  template:
+    metadata:
+      labels:
+        run: preguntas
+    spec:
+      containers:
+      - image: dockercochabamba/2-bday-preguntas-arm:v2
+        name: preguntas
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "128Mi"
+          limits:
+            cpu: "205m"
+            memory: "178Mi"
+        env:
+        - name: DB_ADDRESS
+          value: mongodb://db:27017
+        ports:
+          - containerPort: 80
+            name: http
+            protocol: TCP
