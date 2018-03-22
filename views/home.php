@@ -76,5 +76,21 @@
 		</div>
 	</section>
 
+	<footer class="footer">
+
+		<div class="container">
+			<div class="column has-text-centered">
+				<a href="https://bulma.io/made-with-bulma/">
+					<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+				</a>
+				<br>
+				<small>
+					&copy;2018 <a href="https://facebook.com/dockercochabamba">Docker Cochabamba</a> <br>
+					Servido por <strong><?php echo getenv('HOSTNAME'); ?> </strong>
+				</small>
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>
