@@ -2,10 +2,12 @@ version: "2"
 
 services:
   db:
-    image: mongo:3.6
+    image: ftavares/rpi-mongo:3.0.9
   app:
-    image: dockercochabamba/2-bday-preguntas-amd:v1
-    build: .
+    image: dockercochabamba/2-bday-preguntas-arm:v1
+    build:
+      context: ./
+      dockerfile: Dockerfile.arm
     volumes:
       - .:/var/www/html
     ports:
