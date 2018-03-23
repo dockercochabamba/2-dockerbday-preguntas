@@ -4,7 +4,11 @@ services:
   db:
     image: mongo:3.6
   app:
+<<<<<<< HEAD
     image: dockercochabamba/2-bday-preguntas-amd:v1
+=======
+    image: dockercochabamba/2-bday-preguntas-amd64:v2
+>>>>>>> v2
     build: .
     volumes:
       - .:/var/www/html

@@ -4,7 +4,11 @@ services:
   db:
     image: ftavares/rpi-mongo:3.0.9
   app:
+<<<<<<< HEAD
     image: dockercochabamba/2-bday-preguntas-arm:v1
+=======
+    image: dockercochabamba/2-bday-preguntas-arm:v2
+>>>>>>> v2
     build:
       context: ./
       dockerfile: Dockerfile.arm
